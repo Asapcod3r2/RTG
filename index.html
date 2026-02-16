@@ -120,16 +120,19 @@ function handleAreaChange() {
         <p class="lead mb-4">We deliver FREE in:</p>
         <div class="row g-3 mb-4">
             <div class="col-6 col-md-4 col-lg-3">
-                <span class="badge bg-warning text-dark w-100 p-2">Louis Trichardt</span>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <span class="badge bg-warning text-dark w-100 p-2">Elim</span>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
                 <span class="badge bg-warning text-dark w-100 p-2">Tshikota</span>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-                <span class="badge bg-warning text-dark w-100 p-2">Elti Villas</span>
+                <span class="badge bg-warning text-dark w-100 p-2">Old Town</span>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <span class="badge bg-warning text-dark w-100 p-2">New Town</span>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <span class="badge bg-warning text-dark w-100 p-2">Eltivillas</span>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <span class="badge bg-warning text-dark w-100 p-2">Makhado Park</span>
             </div>
         </div>
         <p class="text-muted">For deliveries outside our service areas, please complete your order details and our team will contact you with a professional quote, including our competitive per-kilometre delivery rate.</p>
@@ -154,15 +157,16 @@ function handleAreaChange() {
                     <div class="mb-3">
                         <select class="form-select form-select-lg" id="area" name="area" required onchange="handleAreaChange()">
                             <option value="">Select Area</option>
-                            <option>Louis Trichardt</option>
-                            <option>Elim</option>
                             <option>Tshikota</option>
-                            <option>Elti Villas</option>
+                            <option>Old Town</option>
+                            <option>New Town</option>
+                            <option>Eltivillas</option>
+                            <option>Makhado Park</option>
                             <option>Other</option>
                         </select>
                     </div>
-                    <div id="quoteMessage" class="mb-3 p-3 rounded bg-warning bg-opacity-10 border border-warning" style="display:none;">
-                        <p class="text-warning fw-bold mb-0"><i class="fa fa-info-circle"></i> We will contact you shortly with a detailed quote based on your delivery location and our per-kilometre delivery rate.</p>
+                    <div id="quoteMessage" class="mb-3 p-3 rounded bg-warning bg-opacity-10 border border-warning">
+                        <p class="text-warning fw-bold mb-0"><i class="fa fa-info-circle"></i> For deliveries outside our service areas, we will contact you with a detailed quote based on your delivery location and our per-kilometre delivery rate.</p>
                     </div>
                     <div class="mb-3">
                         <input type="number" id="quantity" class="form-control form-control-lg" name="quantity" placeholder="Quantity (packs)" min="1" required onkeyup="calculateTotal()">
