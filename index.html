@@ -23,6 +23,16 @@ function calculateTotal() {
     let total = quantity * price;
     document.getElementById("total").innerHTML = "Total: R" + total;
 }
+
+function handleAreaChange() {
+    let area = document.getElementById("area").value;
+    let quoteMessage = document.getElementById("quoteMessage");
+    if (area === "Other") {
+        quoteMessage.style.display = "block";
+    } else {
+        quoteMessage.style.display = "none";
+    }
+}
 </script>
 
 </head>
@@ -119,22 +129,10 @@ function calculateTotal() {
                 <span class="badge bg-warning text-dark w-100 p-2">Tshikota</span>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-                <span class="badge bg-warning text-dark w-100 p-2">Madombidzha</span>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
                 <span class="badge bg-warning text-dark w-100 p-2">Elti Villas</span>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <span class="badge bg-warning text-dark w-100 p-2">Buysdorp</span>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <span class="badge bg-warning text-dark w-100 p-2">Bungeni</span>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <span class="badge bg-warning text-dark w-100 p-2">Elim Hospital</span>
-            </div>
         </div>
-        <p class="text-muted">Other areas may include a small delivery fee.</p>
+        <p class="text-muted">For deliveries outside our service areas, please complete your order details and our team will contact you with a professional quote, including our competitive per-kilometre delivery rate.</p>
     </div>
 </section>
 
@@ -154,18 +152,17 @@ function calculateTotal() {
                         <input type="text" class="form-control form-control-lg" name="address" placeholder="Delivery Address" required>
                     </div>
                     <div class="mb-3">
-                        <select class="form-select form-select-lg" name="area" required>
+                        <select class="form-select form-select-lg" id="area" name="area" required onchange="handleAreaChange()">
                             <option value="">Select Area</option>
                             <option>Louis Trichardt</option>
                             <option>Elim</option>
                             <option>Tshikota</option>
-                            <option>Madombidzha</option>
                             <option>Elti Villas</option>
-                            <option>Buysdorp</option>
-                            <option>Bungeni</option>
-                            <option>Elim Hospital</option>
                             <option>Other</option>
                         </select>
+                    </div>
+                    <div id="quoteMessage" class="mb-3 p-3 rounded bg-warning bg-opacity-10 border border-warning" style="display:none;">
+                        <p class="text-warning fw-bold mb-0"><i class="fa fa-info-circle"></i> We will contact you shortly with a detailed quote based on your delivery location and our per-kilometre delivery rate.</p>
                     </div>
                     <div class="mb-3">
                         <input type="number" id="quantity" class="form-control form-control-lg" name="quantity" placeholder="Quantity (packs)" min="1" required onkeyup="calculateTotal()">
@@ -185,10 +182,10 @@ function calculateTotal() {
         <h2 class="display-5 fw-bold mb-4">Contact Us</h2>
         <div class="row text-center">
             <div class="col-md-6 col-lg-4 mb-3">
-                <p class="lead"><i class="fa fa-phone text-warning"></i> 077 630 2791</p>
+                <p class="lead"><i class="fa fa-phone text-warning"></i> 077 417 7176</p>
             </div>
             <div class="col-md-6 col-lg-4 mb-3">
-                <p class="lead"><i class="fa fa-whatsapp text-success"></i> <a href="https://wa.me/27776302791" target="_blank" class="text-success text-decoration-none">WhatsApp: 077 630 2791</a></p>
+                <p class="lead"><i class="fa fa-whatsapp text-success"></i> <a href="https://wa.me/27656302791" target="_blank" class="text-success text-decoration-none">WhatsApp:065 630 2791 </a></p>
             </div>
             <div class="col-md-6 col-lg-4 mb-3">
                 <p class="lead"><i class="fa fa-envelope text-warning"></i> rtgxsolutions@gmail.com</p>
