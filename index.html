@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ready To Go - RTG | Firewood</title>
+
+<!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+<script>
+function calculateTotal() {
+    let quantity = document.getElementById("quantity").value;
+    let price = quantity >= 10 ? 18 : 25;
+    let total = quantity * price;
+    document.getElementById("total").innerHTML = "Total: R" + total;
+}
+</script>
+
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-warning">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <img src="logo.png" alt="RTG Logo" class="me-2" height="50">
+                <div>
+                    <div class="brand-title">READY TO GO - RTG</div>
+                    <div class="brand-subtitle">Excellent solutions for you</div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home"><i class="fa fa-home"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products"><i class="fa fa-fire"></i> Firewood</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#order"><i class="fa fa-cart-shopping"></i> Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact"><i class="fa fa-phone"></i> Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section id="home" class="hero py-5">
+    <div class="container">
+        <h2 class="display-4 fw-bold mb-4">🔥 Premium Firewood Delivered Fast</h2>
+        <p class="lead mb-3">
+            Fire creates moments. Warmth. Connection. Celebration.
+        </p>
+        <p class="lead mb-4">
+            From braais to winter fireplaces, camping trips to family gatherings —
+            RTG delivers strong, long-burning firewood straight to your door.
+        </p>
+        <button class="btn btn-warning btn-lg" onclick="location.href='#order'">Order Now</button>
+    </div>
+</section>
+
+<section id="products" class="products py-5">
+    <div class="container">
+        <h2 class="display-5 fw-bold mb-5">Our Firewood Packs</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-5 mx-auto">
+                <div class="card border-warning shadow-lg product-card">
+                    <img src="wood1.jpg" class="card-img-top product-img" alt="Firewood">
+                    <div class="card-body text-center product-info">
+                        <h3 class="card-title fw-bold">Standard Pack</h3>
+                        <p class="card-text">Perfect for braai, fireplaces & outdoor cooking.</p>
+                        <p class="text-warning fw-bold fs-5 mb-2">R25 per pack</p>
+                        <p class="text-success fw-bold">R18 per pack (10+ packs)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-5 mx-auto">
+                <div class="card border-warning shadow-lg product-card">
+                    <img src="wood2.jpg" class="card-img-top product-img" alt="Firewood">
+                    <div class="card-body text-center product-info">
+                        <h3 class="card-title fw-bold">Bulk Supply</h3>
+                        <p class="card-text">Ideal for events, lodges & restaurants.</p>
+                        <p class="text-warning fw-bold fs-5">Automatic bulk discount applied</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="delivery py-5 bg-dark">
+    <div class="container">
+        <h2 class="display-5 fw-bold mb-4"><i class="fa fa-truck"></i> Free Delivery Areas</h2>
+        <p class="lead mb-4">We deliver FREE in:</p>
+        <div class="row g-3 mb-4">
+            <div class="col-6 col-md-4 col-lg-3">
+                <span class="badge bg-warning text-dark w-100 p-2">Louis Trichardt</span>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <span class="badge bg-warning text-dark w-100 p-2">Elim</span>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <span class="badge bg-warning text-dark w-100 p-2">Tshikota</span>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <span class="badge bg-warning text-dark w-100 p-2">Madombidzha</span>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <span class="badge bg-warning text-dark w-100 p-2">Elti Villas</span>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <span class="badge bg-warning text-dark w-100 p-2">Buysdorp</span>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <span class="badge bg-warning text-dark w-100 p-2">Bungeni</span>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <span class="badge bg-warning text-dark w-100 p-2">Elim Hospital</span>
+            </div>
+        </div>
+        <p class="text-muted">Other areas may include a small delivery fee.</p>
+    </div>
+</section>
+
+<section id="order" class="order py-5">
+    <div class="container">
+        <h2 class="display-5 fw-bold mb-5"><i class="fa fa-bag-shopping"></i> Place Your Order</h2>
+        <div class="row">
+            <div class="col-md-8 col-lg-6 mx-auto">
+                <form action="order.php" method="POST">
+                    <div class="mb-3">
+                        <input type="text" class="form-control form-control-lg" name="name" placeholder="Full Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control form-control-lg" name="phone" placeholder="Phone Number" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control form-control-lg" name="address" placeholder="Delivery Address" required>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select form-select-lg" name="area" required>
+                            <option value="">Select Area</option>
+                            <option>Louis Trichardt</option>
+                            <option>Elim</option>
+                            <option>Tshikota</option>
+                            <option>Madombidzha</option>
+                            <option>Elti Villas</option>
+                            <option>Buysdorp</option>
+                            <option>Bungeni</option>
+                            <option>Elim Hospital</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" id="quantity" class="form-control form-control-lg" name="quantity" placeholder="Quantity (packs)" min="1" required onkeyup="calculateTotal()">
+                    </div>
+                    <div class="mb-3 p-3 rounded bg-dark border border-warning">
+                        <p id="total" class="text-warning fw-bold fs-5 mb-0">Total: R0</p>
+                    </div>
+                    <button type="submit" class="btn btn-warning btn-lg w-100">🔥 Confirm Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact py-5 bg-dark">
+    <div class="container">
+        <h2 class="display-5 fw-bold mb-4">Contact Us</h2>
+        <div class="row text-center">
+            <div class="col-md-6 col-lg-4 mb-3">
+                <p class="lead"><i class="fa fa-phone text-warning"></i> 077 630 2791</p>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <p class="lead"><i class="fa fa-whatsapp text-success"></i> <a href="https://wa.me/27776302791" target="_blank" class="text-success text-decoration-none">WhatsApp: 077 630 2791</a></p>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-3">
+                <p class="lead"><i class="fa fa-envelope text-warning"></i> rtgxsolutions@gmail.com</p>
+            </div>
+            <div class="col-12 mt-3">
+                <p class="lead"><i class="fa fa-location-dot text-warning"></i> Louis Trichardt, Limpopo</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-dark border-top border-warning text-center py-4">
+    <p class="mb-0">&copy; 2026 Ready To Go - RTG | Excellent solutions for you</p>
+</footer>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
